@@ -48,8 +48,9 @@ public class MyArrayList<T> {
 
     public T remove(int index) {
         T data = getData(index);
-        for (int i = index; i < size - 1; i++)
-            this.list[index] = this.list[index + 1];
+        for (int i = index; i < size - 1; i++) {
+            this.list[i] = this.list[i + 1];
+        }
         this.list[--size] = null;
         return data;
     }
